@@ -9,6 +9,8 @@
 <head>
     <title>Menu</title>
     <link rel="stylesheet" href="css/dashboard.css">
+    <script src="scripts/js/funciones.js"></script>
+    <script src="scripts/js/jquery.min.js"></script>
 </head>
 <body style="background-color: white;">
 <svg style="display:none;">
@@ -106,7 +108,7 @@
         <h3 style="color:darkgray;">INSERTAR</h3>
       </li>
       <li>
-        <a href="#0">
+        <a href="#0" onclick="graciasGenio('#contenido','cajon.php')">
 
             <img src="img/coche.png" alt="logo" width="35" height="35"style=""></img>
 
@@ -114,28 +116,28 @@
         </a>
       </li>
       <li>
-        <a href="#0">
+        <a href="#0" onclick="graciasGenio('#contenido','cliente.php')">
         <img src="img/cliente.png" alt="logo" width="25" height="25"></img>
 
           <span style="padding: 2%;">CLIENTE</span>
         </a>
       </li>
       <li>
-        <a href="#0">
+        <a href="#0" onclick="graciasGenio('#contenido','registro.php')">
         <img src="img/verificar.png" alt="logo" width="25" height="25"></img>
 
           <span style="padding: 2%;">REGISTRO</span>
         </a>
       </li>
       <li>
-        <a href="#0">
+        <a href="#0" onclick="graciasGenio('#contenido','tarifa.php')">
         <img src="img/gastos.png" alt="logo" width="25" height="25"></img>
 
           <span style="padding: 2%;">TARIFA</span>
         </a>
       </li>
       <li>
-        <a href="#0">
+        <a href="#0" onclick="graciasGenio('#contenido','forVeiculo.php')">
         <img src="img/vehiculo.png" alt="logo" width="25" height="25"style=""></img>
 
           <span style="padding: 2%;">VEHICULO</span>
@@ -186,9 +188,8 @@
     </ul>
   </nav>
 </header>
-<section class="page-content">
-  <section class="search-and-user">
-    <h1>nada aun 0-o</h1>
+ <!-- <section class="search-and-user">-->
+    <div class="page-content" id="contenido"></div>
     <!--
     <form>
       <input type="search" placeholder="Search Pages...">
@@ -207,13 +208,12 @@
           <use xlink:href="#users"></use>
         </svg>
       </div>
-    </div>
-  </section>
+    </div>-->
+  <!--</section>-->
 
   <footer class="page-footer">
     </a>
   </footer>
-</section>-->
 <script src="scripts/js/dashboard.js"></script>
 
 </body>

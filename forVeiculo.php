@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/dashboard.css">
     <title>Formulario de Vehículo</title>
 </head>
 <body style="background: #eee;">
@@ -45,8 +46,9 @@
                                     <input type="text" id="tipo_cliente" class="form-control" placeholder="Tipo de Cliente" name="tipo_cliente" required>
                                 </div>
                                 <div class="form-outline mb-4">
-                                    <label for="id_cliente" class="form-label">id_Cliente</label>
-                                    <input type="number" id="id_cliente" class="form-control" placeholder="id_Cliente" name="id_cliente" required>
+                                    <label for="id_cliente" class="form-label">Cliente</label>
+                                    <select class="form-control" name="id_cliente" id="id_cliente">
+                                        <option value="">selecciona un cliente</option>
                                 </div>
 
                                 <div class="text-center pt-1 mb-5 pb-1">

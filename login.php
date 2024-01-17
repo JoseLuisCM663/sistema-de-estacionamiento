@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripts/js/funciones.js"></script>
+</head>
+<body>
 <?php
     include 'coneccion.php';
     session_start();
@@ -22,10 +31,12 @@
             $_SESSION['id']=$id;
             header('Location:menu.php');
         }else{
-            echo '<script language="javascript">alert("contraseña incorrecta");location.href="index.php"</script>';
+            echo '<script language="javascript">msjErrorPassword();</script>';
         }
     }else{
-        echo '<script language="javascript">alert("usuario incorrecto");location.href="index.php"</script>';
+        echo '<script language="javascript">msjErrorUser();</script>';
     }
     $stmt->close();
 ?>
+</body>
+</html>
