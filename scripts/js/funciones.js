@@ -10,3 +10,25 @@ function msjErrorPassword(){
 function graciasGenio(div,url){
     $(div).load(url);
 }
+
+function registrarCliente(){
+    var nombre=$("#nombre").val();
+    var direccion=$("#direccion").val();
+    var telefono=$("#telefono").val();
+    var correo=$("#correo").val();
+
+    alert(nombre+direccion+telefono+correo);
+    
+    $.post("registrarcliente.php",{
+        "nombre":nombre,
+        "direcion":direccion,
+        "telefono":telefono,
+        "correo":correo
+    },function(respuesta){
+        alert(respuesta);
+        $("#nombre").val("");
+        $("#direccion").val("");
+        $("#telefono").val("");
+        $("#correo").val("");
+    })
+}

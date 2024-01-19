@@ -15,19 +15,19 @@
                 <div class="card rounded-3 text-black">
                     <div class="col-lg-12">
                         <div class="card-body p-md-5 mx-md-4">
-                            <div class="text-center">
+                            <div class="text-center" >
                                 <h4 class="mt-1 mb-5 pb-1">Formulario de Registro</h4>
                             </div>
                             <form action="procesar_formulario.php" method="post">
                                 <p class="text-center mb-4">Ingresa los datos del registro</p>
 
-                                <div class="form-outline mb-4">
+                                <div class="form-outline mb-4" style="padding: 5%;">
                                     <label for="id_vehiculo" class="form-label">Vehículo</label>
                                     <select class="form-control" name="id_vehiculo" id="id_vehiculo">
                                         <option value="">selecciona un vehiculo</option>
                                 </div>
 
-                                <div class="form-outline mb-4">
+                                <div class="form-outline mb-4" style="padding: 50%;">
                                     <label for="cajon" class="form-label">Cajon</label>
                                     <select class="form-control" name="id_cajon" id="id_cajon">
                                         <option value="">selecciona un cajon</option>

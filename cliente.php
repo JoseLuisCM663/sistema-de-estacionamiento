@@ -18,7 +18,7 @@
                             <div class="text-center">
                                 <h4 class="mt-1 mb-5 pb-1">Formulario del cliente</h4>
                             </div>
-                            <form action="procesar_formulario.php" method="post">
+                            <form id="Clientes" name="Clientes">
                                 <p class="text-center mb-4">Ingresa los datos del cliente</p>
 
                                 <div class="form-outline mb-4">
@@ -42,7 +42,7 @@
                                 </div>
 
                                 <div class="text-center pt-1 mb-5 pb-1">
-                                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-6" style="width:300px;" type="submit">Ingresar</button>
+                                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-6" onclick="registrarCliente();" style="width:300px;">Ingresar</button>
                                 </div>
                             </form>
                         </div>
