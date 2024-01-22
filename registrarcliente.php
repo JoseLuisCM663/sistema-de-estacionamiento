@@ -7,5 +7,9 @@ $telefono=$_POST['telefono'];
 $correo=$_POST['correo'];
 
 $con ="INSERT INTO cliente(nombre,direccion,telefono,correo)VALUES('".$nombre."','".$direccion."','".$telefono."','".$correo."')";
-    if($datos=mysqli_query($conexion,))
+    if($datos=mysqli_query($conexion,$con)){
+        echo "Datos insertados correctamente";
+    }else{
+        echo "Error al insertar los datos";
+    }
 ?>

@@ -21,7 +21,7 @@ function registrarCliente(){
     
     $.post("registrarcliente.php",{
         "nombre":nombre,
-        "direcion":direccion,
+        "direccion":direccion,
         "telefono":telefono,
         "correo":correo
     },function(respuesta){
@@ -30,5 +30,5 @@ function registrarCliente(){
         $("#direccion").val("");
         $("#telefono").val("");
         $("#correo").val("");
-    })
+    });
 }
