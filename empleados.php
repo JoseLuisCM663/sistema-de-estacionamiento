@@ -16,10 +16,10 @@
                     <div class="col-lg-12">
                         <div class="card-body p-md-5 mx-md-4">
                             <div class="text-center">
-                                <h4 class="mt-1 mb-5 pb-1">Formulario del cliente</h4>
+                                <h4 class="mt-1 mb-5 pb-1">Formulario del Empleados</h4>
                             </div>
-                            <form id="Clientes" name="Clientes">
-                                <p class="text-center mb-4">Ingresa los datos del cliente</p>
+                            <form id="Empleados" name="Empleados">
+                                <p class="text-center mb-4">Ingresa los datos del empleado</p>
 
                                 <div class="form-outline mb-4">
                                     <label for="nombre" class="form-label">Nombre</label>
@@ -41,8 +41,17 @@
                                     <input type="gmail" id="correo" class="form-control" placeholder="Correo Electronico" name="correo" required>
                                 </div>
 
+                                <div class="form-outline mb-4">
+                                    <label for="usuario" class="form-label">Usuario</label>
+                                    <input type="text" id="usuario" class="form-control" placeholder="Usuario" name="usuario" required>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label for="contraseña" class="form-label">Contraseña</label>
+                                    <input type="password" id="contra" class="form-control" placeholder="Contraseña" name="contra" required>
+                                </div>
                                 <div class="text-center pt-1 mb-5 pb-1">
-                                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-6" onclick="registrarCliente();" style="width:300px;">Registrar</button>
+                                    <input class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-6" onclick="registrarEmpleado();" style="width:300px;" value="Registrar">
                                 </div>
                             </form>
                         </div>

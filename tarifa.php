@@ -17,7 +17,7 @@
                             <div class="text-center">
                                 <h4 class="mt-1 mb-5 pb-1">Formulario de Tarifa</h4>
                             </div>
-                            <form action="procesar_formulario.php" method="post">
+                            <form id="Tarifa" name="Tarifa">
                                 <p class="text-center mb-4">Ingresa los datos de la tarifa</p>
 
                                 <div class="form-outline mb-4">
@@ -31,7 +31,7 @@
                                 </div>
 
                                 <div class="text-center pt-1 mb-5 pb-1">
-                                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-6" style="width:300px;" type="submit">Ingresar</button>
+                                <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-6" onclick="registrarTarifa();" style="width:300px;">Registrar</button>
                                 </div>
                             </form>
                         </div>

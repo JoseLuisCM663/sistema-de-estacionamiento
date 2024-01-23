@@ -18,16 +18,16 @@
                             <div class="text-center">
                                 <h4 class="mt-1 mb-5 pb-1">Formulario del cajon</h4>
                             </div>
-                            <form action="procesar_formulario.php" method="post">
+                            <form id="cajon" name="cajon">
                                 <p class="text-center mb-4">Ingresa los datos del cajon</p>
 
                                 <div class="form-outline mb-4">
                                     <label for="numero" class="form-label">Numero</label>
-                                    <input type="number" id="numero" class="form-control" placeholder="Numero" name="Numero" required>
+                                    <input type="number" id="numero" class="form-control" placeholder="Numero" name="numero" required>
                                 </div>
 
                                 <div class="text-center pt-1 mb-5 pb-1">
-                                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-6" style="width:300px;" type="submit">Ingresar</button>
+                                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-6" onclick="registrarCajon();" style="width:300px;">Ingresar</button>
                                 </div>
 
                             </form>

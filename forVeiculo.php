@@ -18,7 +18,7 @@
                             <div class="text-center">
                                 <h4 class="mt-1 mb-5 pb-1">Formulario de Vehículo</h4>
                             </div>
-                            <form action="procesar_formulario.php" method="post">
+                            <form id="vehiculo" name="vehiculo">
                                 <p class="text-center mb-4">Ingresa los datos del vehículo</p>
 
                                 <div class="form-outline mb-4">
@@ -42,18 +42,32 @@
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <label for="tipo_cliente" class="form-label">Tipo de Cliente</label>
-                                    <input type="text" id="tipo_cliente" class="form-control" placeholder="Tipo de Cliente" name="tipo_cliente" required>
+                                    <label for="tipo" class="form-label">Tipo de Auto</label>
+                                    <select class="form-control" name="tipo" id="tipo">
+                                        <option value="">selecciona un Tipo</option>
+                                        <option value="Grande">Grande</option>
+                                        <option value="Mediano">Mediano</option>
+                                        <option value="Pequeño">Pequeño</option>
+                                    </select>
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label for="id_cliente" class="form-label">Cliente</label>
                                     <select class="form-control" name="id_cliente" id="id_cliente">
                                         <option value="">selecciona un cliente</option>
+                                        <?php
+                                            include 'coneccion.php';
+                                            $query = "SELECT id_cliente, nombre FROM cliente";
+                                            $ejecutar = $conexion->query($query);
+                                            while($result = $ejecutar->fetch_array()) {
+                                                echo "<option value='".$result['id_cliente']."'>".$result['nombre']."</option>";
+                                            }
+                                        ?>
+                                    </select>
+                                </div>
+                                <div class="text-center pt-1 mb-5 pb-1">
+                                <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-6" onclick="registrarVehiculo();" style="width:300px;">Registrar</button>
                                 </div>
 
-                                <div class="text-center pt-1 mb-5 pb-1">
-                                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-6" style="width:300px;" type="submit">Ingresar</button>
-                                </div>
                             </form>
                         </div>
                     </div>
@@ -65,3 +79,4 @@
     <script src="scripts/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+                                            

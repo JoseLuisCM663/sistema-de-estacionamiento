@@ -18,29 +18,56 @@
                             <div class="text-center" >
                                 <h4 class="mt-1 mb-5 pb-1">Formulario de Registro</h4>
                             </div>
-                            <form action="procesar_formulario.php" method="post">
+                            <form id="registro" name="registro">
                                 <p class="text-center mb-4">Ingresa los datos del registro</p>
 
-                                <div class="form-outline mb-4" style="padding: 5%;">
+                                <div class="form-outline mb-4" >
                                     <label for="id_vehiculo" class="form-label">Vehículo</label>
                                     <select class="form-control" name="id_vehiculo" id="id_vehiculo">
                                         <option value="">selecciona un vehiculo</option>
+                                        <?php
+                                            include 'coneccion.php';
+                                            $query = "SELECT id_vehiculo, matricula FROM vehículo";
+                                            $ejecutar = $conexion->query($query);
+                                            while($result = $ejecutar->fetch_array()) {
+                                                echo "<option value='".$result['id_vehiculo']."'>".$result['matricula']."</option>";
+                                            }
+                                        ?>
+                                    </select>
                                 </div>
 
-                                <div class="form-outline mb-4" style="padding: 50%;">
+                                <div class="form-outline mb-4">
                                     <label for="cajon" class="form-label">Cajon</label>
                                     <select class="form-control" name="id_cajon" id="id_cajon">
                                         <option value="">selecciona un cajon</option>
+                                        <?php
+                                            include 'coneccion.php';
+                                            $query = "SELECT id_cajon, numero FROM cajon";
+                                            $ejecutar = $conexion->query($query);
+                                            while($result = $ejecutar->fetch_array()) {
+                                                echo "<option value='".$result['id_cajon']."'>".$result['numero']."</option>";
+                                            }
+                                        ?>
+                                    </select>
                                 </div>
 
                                 <div class="form-outline mb-4">
                                     <label for="id_tarifa" class="form-label">Tarifa</label>
                                     <select class="form-control" name="id_tarifa" id="id_tarifa">
                                         <option value="">selecciona la tarifa</option>
+                                        <?php
+                                            include 'coneccion.php';
+                                            $query = "SELECT id_tarifa, tarifa FROM tarifa";
+                                            $ejecutar = $conexion->query($query);
+                                            while($result = $ejecutar->fetch_array()) {
+                                                echo "<option value='".$result['id_tarifa']."'>".$result['tarifa']."</option>";
+                                            }
+                                        ?>
+                                    </select>
                                 </div>
 
                                 <div class="text-center pt-1 mb-5 pb-1">
-                                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-6" style="width:300px;" type="submit">Ingresar</button>
+                                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-6" onclick="registrarRegistro();" style="width:300px;" type="submit" on>Ingresar</button>
                                 </div>
                             </form>
                         </div>

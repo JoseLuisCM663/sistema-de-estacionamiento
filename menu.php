@@ -135,7 +135,7 @@
 
           <span style="padding: 2%;">TARIFA</span>
         </a>
-      </li>
+      </li  >
       <li>
         <a href="#0" onclick="graciasGenio('#contenido','forVeiculo.php')">
         <img src="img/vehiculo.png" alt="logo" width="25" height="25"style=""></img>
@@ -151,6 +151,13 @@
         <img src="img/salir.png" alt="logo" width="23" height="23"></img>
 
           <span style="padding: 2%;">SALIR</span>
+        </a>
+      </li>
+      <li>
+      <a href="#0" onclick="graciasGenio('#contenido','empleados.php')">
+        <img src="img/.png" alt="logo" width="23" height="23"></img>
+
+          <span style="padding: 2%;">EMPLEADOS</span>
         </a>
       </li>
       <li>
