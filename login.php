@@ -15,20 +15,20 @@
         header('Location:index.php');
     }
     //evitar inyeccion SQL
-    if($stmt=$conexion->prepare('SELECT usuario,contraseña FROM empleados WHERE usuario=?')){
+    if($stmt=$conexion->prepare('SELECT id_empleado,usuario,contraseña FROM empleados WHERE usuario=?')){
         $stmt->bind_param('s',$_POST['usuario']);
         $stmt->execute();
     }
     //verificar si lo ingresado coincide con la BD
     $stmt->store_result();
     if($stmt->num_rows>0){
-        $stmt->bind_result($usuario,$contraseña);
+        $stmt->bind_result($id_empleado,$usuario,$contraseña);
         $stmt->fetch();
         if($_POST['contraseña']===$contraseña){
             session_regenerate_id();
             $_SESSION['loggedin']=TRUE;
             $_SESSION['name']=$_POST['usuario'];
-            $_SESSION['id']=$id;
+            $_SESSION['id']=$_POST['id_empleado'];
             header('Location:menu.php');
         }else{
             echo '<script language="javascript">msjErrorPassword();</script>';

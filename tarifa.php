@@ -31,7 +31,7 @@
                                 </div>
 
                                 <div class="text-center pt-1 mb-5 pb-1">
-                                <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-6" onclick="registrarTarifa();" style="width:300px;">Registrar</button>
+                                <input value="Registrar" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-6" onclick="registrarTarifa();" style="width:300px;">
                                 </div>
                             </form>
                         </div>
@@ -40,6 +40,11 @@
             </div>
         </div>
     </section>
+    <div>
+    <?php
+        include 'consultarTarifa.php'
+        ?>
+    </div>
 
     <script src="scripts/js/bootstrap.bundle.min.js"></script>
 </body>

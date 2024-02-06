@@ -51,7 +51,7 @@
                                     <input type="password" id="contra" class="form-control" placeholder="Contraseña" name="contra" required>
                                 </div>
                                 <div class="text-center pt-1 mb-5 pb-1">
-                                    <input class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-6" onclick="registrarEmpleado();" style="width:300px;" value="Registrar">
+                                <input value="Registrar" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-6" onclick="registrarEmpleado();" style="width:300px;">
                                 </div>
                             </form>
                         </div>
@@ -60,7 +60,13 @@
             </div>
         </div>
     </section>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+    <div >
+        <?php
+        include 'consultarEmpleados.php'
+        ?>
+    </div>
     <script src="scripts/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

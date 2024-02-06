@@ -117,16 +117,75 @@ function registrarRegistro(){
     var id_vehiculo=$("#id_vehiculo").val();
     var id_tarifa=$("#id_tarifa").val();
 
-    alert(id_cajon+""+id_vehiculo+""+id_tarifa);
     $.post("registrarRegistro.php",{
         "id_cajon":id_cajon,
         "id_vehiculo":id_vehiculo,
         "id_tarifa":id_tarifa,
 
-    },function(res){
+    },
+    function(res){
         alert(res);
         $("#id_cajon").val("");
         $("#id_vehiculo").val("");
         $("#id_tarifa").val("");
     });
 }
+
+function eliminarCajon(id){
+    $.post("eliminarCajon.php",{
+        "id":id
+    },
+    function(result){
+        alert(result);
+    })
+    
+}
+function eliminarCliente(idt){
+    $.post("eliminarCliente.php",{
+        "idt":idt
+    },
+    function(result){
+        alert(result);
+    })
+    
+}
+function eliminarTarifa(idtr){
+    $.post("eliminarTarifa.php",{
+        "idtr":idtr
+    },
+    function(result){
+        alert(result);
+    })
+    
+}
+
+function eliminarVehiculo(idv){
+    $.post("eliminarVehiculo.php",{
+        "idv":idv
+    },
+    function(result){
+        alert(result);
+    })
+    
+}
+
+function eliminarEmpleado(ide){
+    $.post("eliminarEmpleado.php",{
+        "ide":ide
+    },
+    function(result){
+        alert(result);
+    })
+    
+}
+
+function editarCliente(idcliente){
+    alert(idcliente);
+    $.post("editarCliente.php",{
+        "idcliente":idcliente
+       
+    },function(respuesta){
+        contenido.innerHTML=respuesta;
+    });
+}
+

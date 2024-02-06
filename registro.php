@@ -67,7 +67,7 @@
                                 </div>
 
                                 <div class="text-center pt-1 mb-5 pb-1">
-                                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-6" onclick="registrarRegistro();" style="width:300px;" type="submit" on>Ingresar</button>
+                                <input value="Registrar" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-6" onclick="registrarRegistro();" style="width:300px;">
                                 </div>
                             </form>
                         </div>
